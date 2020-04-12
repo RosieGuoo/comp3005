@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>bookstore</title>
+    <div align = "center"><img src="book.gif" alt="food"></div>
+    <style media="screen">
+    body{
+      background-color: lightblue;
+    }
+    .dropdown select {
+    width: 30%;
+    background: Plum;
+    font-size: 15px;
+  }
+    .menuitem img{
+         width: 18px;
+         height: 18px;
+         float: right;
+         margin: auto;
+     }
+     .orderitem img{
+            width: 18px;
+            height: 18px;
+            margin: auto;
+     }
+    .container {
+            display: flex;
+            width: 100%;
+            height: 500px;
+      }
+    .column1 {
+            padding: 0 10px;
+            flex: 1;
+            overflow-y: auto;
+            border-right: 10px solid blue;
+      }
+      .column2 {
+          padding: 0 10px;
+          flex: 1;
+          overflow-y: auto;
+          border-right: 10px solid blue;
+      }
+        .column3 {
+            padding: 0 10px;
+            margin-left: 10px;
+            flex: 1;
+            overflow-y: auto;
+      }
+      #list_categories .categoryitem {
+            line-height: 50px;
+            font-size: 30px;
+      }
+      #list_menuitems .categoryitem {
+            line-height: 50px;
+            color: purple;
+            background: lightblue;
+            font-size:20px;
+        }
+        .menuitem {
+            display: flex;
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+
+
+        .orderitem {
+            display: flex;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .orderitem .name {
+            flex: 1;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        .orderitem .count {
+            display: inline-block;
+            width: 30px;
+            font-size: 20px;
+        }
+        .orderitem .price {
+            display: inline-block;
+            width: 60px;
+            font-size: 20px;
+        }
+        #error_message {
+            color: red;
+            font-size: 20px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div>
+        <div>
+          <div>
+            <h5> ©️Designed by YUQING GUO</h5>
+            </div>
+            <div>
+                <h2>Welcome to bookstore!</h2>
+
+            </div>
+            <div>
+                <span><font size = "5" color = Blue> Select the Genres of the book</font></span>
+                <div class="dropdown">
+                  <select id="dropdown_store" ><font size = "5"></font></select>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="column1">
+                <div>
+                    <h2>authors & series</h2>
+                </div>
+                <div id="list_categories" >
+
+                </div>
+            </div>
+            <div class="column2">
+                <div>
+                    <h2>Here are some books!!</h2>
+                </div>
+                <div id="list_menuitems">
+                </div>
+
+            </div>
+            <div class="column3">
+                <div>
+                    <h2>checkout Basket</h2>
+                </div>
+                <div id="list_orderitems">
+
+                </div>
+                <div id="orders_total">
+                    <div>
+                        Subtotal: $<span id="value_subtotal"></span>
+                    </div>
+
+                    <div>
+                        Tax: $<span id="value_tax"></span>
+                    </div>
+                    <div>
+                        <font size = "5">Total: $<span id="value_total"></font></<span></span>
+                    </div>
+                    <div id="error_message">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bookstore.js"></script>
+
+</body>
+</html>
